@@ -1,6 +1,8 @@
-html, body{
+body{
     background-color: #172033;
     color: #F7F3E3;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding-bottom: 50px;
 }
 
 div {
@@ -13,6 +15,13 @@ button {
     border-radius: 5px;
 }
 
+.PostDivider {
+    background-color: #f7f3e3;
+    border: none; /* Removes any default border */
+    height: 2px; /* Adjust thickness */
+    opacity: 0.2; /* Adjust transparency */
+}
+
 .HeaderContainer{
     background-color: #0f1522;
     margin-top: 0px;
@@ -22,11 +31,31 @@ button {
     justify-content: center;
     display: flex;
     font-family: cursive;
+    position:fixed;
+    top: 0;
+    width: 100%;
+}
+
+.PostBoxContainer {
+    margin: auto;
+    background: #2b3344be;
+    border-radius: 5px;
+    width: 1fr;
+    margin: 5px;
+    padding: 0px 20px 20px 20px;
+    text-align: left;
+    margin-top: 25vh;
+    margin-bottom: 50px;
+}
+
+.PostSection{
+    display: flex;
+    margin: auto;
+    width: 95%;
 }
 
 @media all and (max-width: 412px) {
     .PageTitle {
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         font-size: 50px;
         margin-top: 10vh;
     }
@@ -34,7 +63,6 @@ button {
 
 @media all and (min-width: 413px){
     .PageTitle{
-        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         font-size: 70px;
         margin-top: 20vh;
     }
@@ -72,23 +100,38 @@ button {
 }
 
 .PostBtn{
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
-    background-color: #a94516;
+    padding: 10px 20px;
+    background-color: #B10F2E;
     color: #F7F3E3;
     float: right;
+    font-weight: bold;
 }
 
 .PostBtn:hover{
-    background-color: #c19680;
-    color: #7e3310;
+    background-color:  #e19999;
+    color: #be0000;
 }
 
 .PostBtn:active{
-    background-color: #7e6153;
-    color: #7e3310;
+    background-color:  #956666;
+    color: #be0000;
+}
+
+.LoadBtn{
+    padding: 10px 20px;
+    background-color: #0081AF;
+    color: #F7F3E3;
+    font-weight: bold;
+}
+
+.LoadBtn:hover{
+    background-color:  #6a8c98;
+    color: #0081AF;
+}
+
+.LoadBtn:active{
+    background-color:  #6a8c98;
+    color: #0081AF;
 }
 
 @media all and (max-width: 412px) {
@@ -109,4 +152,18 @@ button {
         max-width: 60%;
         min-width: 40%;
     }
+}
+
+.Hyperlink{
+    color: #FA824C;
+}
+
+.ReplyHyperlink{
+    color: #FA824C;
+    float: left;
+    margin-top: 7px;
+}
+
+.PostQuestion {
+    margin-bottom: 30px;
 }
