@@ -1,0 +1,112 @@
+html, body{
+    background-color: #172033;
+    color: #F7F3E3;
+}
+
+div {
+    text-align: center;
+}
+
+button {
+    background-color: #495266;
+    border: none;
+    border-radius: 5px;
+}
+
+.HeaderContainer{
+    background-color: #0f1522;
+    margin-top: 0px;
+    margin-top: -22px;
+    height: 10vh;
+    vertical-align: middle;
+    justify-content: center;
+    display: flex;
+    font-family: cursive;
+}
+
+@media all and (max-width: 412px) {
+    .PageTitle {
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 50px;
+        margin-top: 10vh;
+    }
+}
+
+@media all and (min-width: 413px){
+    .PageTitle{
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 70px;
+        margin-top: 20vh;
+    }
+}
+
+
+.PostTitle {
+    background-color: #495266;
+    border: solid;
+    border-color: #0f1522;
+    color: #F7F3E3;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border-width: 7px;
+    max-width: 100%;
+    min-width:100%;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.PostInput {
+    background-color: #495266;
+    color: #F7F3E3;
+    border-color: #0f1522;
+    border-radius: 5px;
+    border-width: 7px;
+    min-height: 20vh;
+    max-height: 50vh;
+    max-width: 100%;
+    min-width:100%;
+    font-size: 20px;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+.PostBtn{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #a94516;
+    color: #F7F3E3;
+    float: right;
+}
+
+.PostBtn:hover{
+    background-color: #c19680;
+    color: #7e3310;
+}
+
+.PostBtn:active{
+    background-color: #7e6153;
+    color: #7e3310;
+}
+
+@media all and (max-width: 412px) {
+    .PostContainer{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: auto;
+        max-width: 85vw;
+        min-width: 40%;
+    }
+}
+
+
+@media all and (min-width: 413px) {
+    .PostContainer{
+        margin: auto;
+        max-width: 60%;
+        min-width: 40%;
+    }
+}
