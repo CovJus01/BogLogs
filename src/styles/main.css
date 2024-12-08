@@ -53,7 +53,7 @@ button:active{
     background: #2b3344be;
     border-radius: 5px;
     width: 1fr;
-    margin: 5px 5px 10px 5px;
+    margin: 5px 5px 20px 5px;
     padding: 10px 20px 20px 20px;
     text-align: left;
 }
@@ -61,6 +61,8 @@ button:active{
 @media all and (max-width: 1065px){
     .PostSection{
         margin-bottom: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
 
@@ -68,17 +70,19 @@ button:active{
     .PostSection{
         display: flex;
         margin-bottom: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
 
-@media all and (max-width: 412px) {
+@media all and (max-width: 413px) {
     .PageTitle {
         font-size: 50px;
-        margin-top: 10vh;
+        margin-top: 30vh;
     }
 }
 
-@media all and (min-width: 412px){
+@media all and (min-width: 413px){
     .PageTitle{
         font-size: 70px;
         margin-top: 20vh;
@@ -178,7 +182,7 @@ button:active{
         color: #FA824C;
         justify-content: center;
         margin: 7px auto auto 0px;
-        padding: 50px;
+        padding: 40px;
     }
 }
 
@@ -196,7 +200,7 @@ button:active{
         color: #FA824C;
         justify-content: left;
         margin-top: 7px;
-        margin-right: 30%;
+        margin-right: 27%;
     }
 }
 
