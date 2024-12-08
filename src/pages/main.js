@@ -9,14 +9,32 @@ export default function MainPage () {
     return (
       <div>
         <h2 className="PageTitle">Got Questions?</h2>
-        <Post/>
-        <br/>
-        <br/>
+        <Post isTitle={true}/>
         <div className="PostSection">
-          <PostBox/>
-          <PostBox/>
-          <PostBox/>
-          <PostBox/>
+        <div id="column1">
+          <PostBox isReply={true}/>
+          <PostBox isReply={true}/>
+          <PostBox isReply={true}/>
+          <PostBox isReply={true}/>
+        </div>
+        <div id="column2">
+          <PostBox isReply={true}/>
+          <PostBox isReply={true}/>
+          <PostBox isReply={true}/>
+          <PostBox isReply={true}/>
+        </div>
+        <div id="column3">
+          <PostBox isReply={true}/>
+          <PostBox isReply={true}/>
+          <PostBox isReply={true}/>
+          <PostBox isReply={true}/>
+        </div>
+        <div id="column4">
+          <PostBox isReply={true}/>
+          <PostBox isReply={true}/>
+          <PostBox isReply={true}/>
+          <PostBox isReply={true}/>
+        </div>
         </div>
         <button className="LoadBtn">Load More</button>
       </div>
