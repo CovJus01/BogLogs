@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import '../styles/main.css';
 import Post from "../components/Post";
 import PostBox from "../components/PostBox"
 
 export default function PostPage () {
-  
+
     return (
       <div className="ViewPost">
         <PostBox isReply={false}/>
