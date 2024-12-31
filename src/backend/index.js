@@ -57,7 +57,7 @@ app.post("/post", async (req, resp) => {
         resp.send(req.body);
         console.log(result);
     } catch (e) {
-        resp.send("Something Went Wrong");
+        resp.send(e);
     }
 });
 

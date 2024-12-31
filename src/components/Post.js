@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from "react";
 
 export default function Post() {
-    const [post, setPost] = useState({title: "", description: ""});
+    const [post, setPost] = useState({title: "", description: "", isParent: true});
 
 
     //Sends a Post request with the post content on the server
     const handleSubmit = () => {
-        fetch("localhost:5000/post", {
+        //Post Request
+        fetch("http://localhost:5000/post", {
         method: "POST",
         headers: {
-            "Content-Type": "application-json",
+            "Content-Type": "application/json",
             },
         body: JSON.stringify(post),
         })
@@ -25,13 +26,16 @@ export default function Post() {
 
         console.log("Posting to the Server!");
     }
+
+
+
     return (
         <div className="PostContainer">
-            <input className="PostTitle" />  <br />
-            <textarea className="PostInput" /> <br />
+            <input value={post.title} onChange={(e) => setPost({...post,title:e.target.value})} className="PostTitle" />  <br />
+            <textarea  value={post.description} onChange={(e) => setPost({...post,description:e.target.value})} className="PostInput" /> <br />
             <div className="Flex">
                 <div className="FillerDiv"/>
-                <button className="PostBtn">Post</button>
+                <button onClick={handleSubmit} className="PostBtn">Post</button>
             </div>
         </div>
     );
