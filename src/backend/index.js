@@ -1,31 +1,36 @@
-// Code  for mongoose config in backend
-// Filename - backend/index.js
+
 require("dotenv").config()
+
 // To connect with your mongoDB database
 const mongoose = require('mongoose');
 const url = `mongodb+srv://${process.env.MONGODB_USER}:${process.env.MONGODB_KEY}@boglogs.c3qyo.mongodb.net/?retryWrites=true&w=majority&appName=BogLogs`;
 mongoose.connect(url);
 
-// Schema for users of app
-const UserSchema = new mongoose.Schema({
-    name: {
+// Schema for Posts
+const PostSchema = new mongoose.Schema({
+    isParent: {
+        type: Boolean,
+        required: true,
+        default: true
+    },
+    title: {
         type: String,
         required: true,
     },
-    email: {
+    description: {
         type: String,
         required: true,
-        unique: true,
     },
-    date: {
+    date_created: {
         type: Date,
         default: Date.now,
-    },
+        required: true,
+    }
 });
-const User = mongoose.model('users', UserSchema);
-User.createIndexes();
 
-// For backend and express
+const Post = mongoose.model("Post", PostSchema);
+
+// Backend Server implementation
 const express = require('express');
 const app = express();
 const cors = require("cors");
@@ -42,21 +47,18 @@ app.get("/", (req, resp) => {
     // backend working properly
 });
 
-app.post("/register", async (req, resp) => {
-    try {
-        const user = new User(req.body);
-        let result = await user.save();
-        result = result.toObject();
-        if (result) {
-            delete result.password;
-            resp.send(req.body);
-            console.log(result);
-        } else {
-            console.log("User already register");
-        }
 
+app.post("/post", async (req, resp) => {
+    try {
+        console.log("Post request");
+        const post = new Post(req.body);
+        let result = await post.save();
+        result = result.toObject();
+        resp.send(req.body);
+        console.log(result);
     } catch (e) {
         resp.send("Something Went Wrong");
     }
 });
+
 app.listen(5000);
