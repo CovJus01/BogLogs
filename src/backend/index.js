@@ -47,10 +47,26 @@ app.get("/", (req, resp) => {
     // backend working properly
 });
 
+app.get ("/post", async (req,resp) => {
+    try {
+
+        console.log("Get Posts");
+        //Unfiltered retrieval of all posts
+        const posts = await Post.find();
+        resp.send(posts);
+        console.log(posts);
+
+    } catch (e) {
+        resp.send(e);
+    }
+
+
+});
 
 app.post("/post", async (req, resp) => {
     try {
         console.log("Post request");
+        //Creating the new post object and saving it to the collection
         const post = new Post(req.body);
         let result = await post.save();
         result = result.toObject();
