@@ -54,7 +54,6 @@ app.get ("/post", async (req,resp) => {
         //Unfiltered retrieval of all posts
         const posts = await Post.find();
         resp.send(posts);
-        console.log(posts);
 
     } catch (e) {
         resp.send(e);

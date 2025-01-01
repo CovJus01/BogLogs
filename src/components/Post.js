@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react";
 export default function Post() {
     const [post, setPost] = useState({title: "", description: "", isParent: true});
 
-
     //Sends a Post request with the post content on the server
     const handleSubmit = () => {
         //Post Request
@@ -26,7 +25,6 @@ export default function Post() {
 
         console.log("Posting to the Server!");
     }
-
 
 
     return (
