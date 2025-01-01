@@ -31,8 +31,8 @@ export default function Post() {
 
     return (
         <div className="PostContainer">
-            <input value={post.title} onChange={(e) => setPost({...post,title:e.target.value})} className="PostTitle" />  <br />
-            <textarea  value={post.description} onChange={(e) => setPost({...post,description:e.target.value})} className="PostInput" /> <br />
+            <input placeholder="Question title..." value={post.title} onChange={(e) => setPost({...post,title:e.target.value})} className="PostTitle" />  <br />
+            <textarea placeholder="Explain further if needed..." value={post.description} onChange={(e) => setPost({...post,description:e.target.value})} className="PostInput" /> <br />
             <div className="Flex">
                 <div className="FillerDiv"/>
                 <button onClick={handleSubmit} className="PostBtn">Post</button>

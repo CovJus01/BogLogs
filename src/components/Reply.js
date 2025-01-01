@@ -25,7 +25,7 @@ export default function Reply() {
     }
     return (
         <div className="PostContainer">
-            <textarea className="PostInput" /> <br />
+            <textarea placeholder="Reply to Post..." className="PostInput" /> <br />
             <div className="Flex">
                 <div className="FillerDiv"/>
                 {<button className="PostBtn">Reply</button>}
