@@ -1,17 +1,15 @@
 import React, { useState, useEffect } from "react";
 
-export default function Post() {
-    const [post, setPost] = useState({title: "", description: "", isParent: true});
-
+export default function Reply() {
+    const [reply, setReply] = useState({title: "", description: "", isParent: false});
     //Sends a Post request with the post content on the server
     const handleSubmit = () => {
-        //Post Request
-        fetch("https://boglogs-server-54b9c1de5997.herokuapp.com/post", {
+        fetch("localhost:5000/reply", {
         method: "POST",
         headers: {
-            "Content-Type": "application/json",
+            "Content-Type": "application-json",
             },
-        body: JSON.stringify(post),
+        body: JSON.stringify(reply),
         })
         .then((response) => {
             if(!response.ok) {
@@ -25,15 +23,12 @@ export default function Post() {
 
         console.log("Posting to the Server!");
     }
-
-
     return (
         <div className="PostContainer">
-            <input placeholder="Question title..." value={post.title} onChange={(e) => setPost({...post,title:e.target.value})} className="PostTitle" />  <br />
-            <textarea placeholder="Explain further if needed..." value={post.description} onChange={(e) => setPost({...post,description:e.target.value})} className="PostInput" /> <br />
+            <textarea placeholder="Reply to Post..." className="PostInput" /> <br />
             <div className="Flex">
                 <div className="FillerDiv"/>
-                <button onClick={handleSubmit} className="PostBtn">Post</button>
+                {<button className="PostBtn">Reply</button>}
             </div>
         </div>
     );
