@@ -9,7 +9,7 @@ export default function MainPage () {
     useEffect(() => {
 
         //Fetch the results
-        fetch("http://localhost:5000/post")
+        fetch("https://boglogs-server-54b9c1de5997.herokuapp.com/post")
         .then((response) => {
             if(!response.ok) {
                 throw new Error("Network response was not ok");

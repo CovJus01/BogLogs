@@ -6,7 +6,7 @@ export default function Post() {
     //Sends a Post request with the post content on the server
     const handleSubmit = () => {
         //Post Request
-        fetch("http://localhost:5000/post", {
+        fetch("https://boglogs-server-54b9c1de5997.herokuapp.com/post", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
