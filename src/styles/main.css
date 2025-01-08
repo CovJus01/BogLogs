@@ -47,15 +47,47 @@ button:active{
     top: 0;
     width: 100%;
 }
+@media all and (max-width: 1065px){
+    .PostBoxContainer {
+        margin: auto;
+        background: #2b3344be;
+        border-radius: 5px;
+        width: 80%;
+        height: 100%;
+        margin: 5px auto 20px auto;
+        padding: 10px 20px 20px 20px;
+        text-align: left;
+    }
+}
 
-.PostBoxContainer {
+@media all and (min-width: 1065px){
+    .PostBoxContainer {
+        margin: auto;
+        background: #2b3344be;
+        border-radius: 5px;
+        width: 20%;
+        height: 100%;
+        margin: 5px auto 20px auto;
+        padding: 10px 20px 20px 20px;
+        text-align: left;
+    }
+}
+
+.LoginContainer{
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+    margin: 100px auto auto auto;
+}
+
+.PostDetailsContainer{
     margin: auto;
-    background: #2b3344be;
-    border-radius: 5px;
-    width: 80%;
-    margin: 5px auto 20px auto;
-    padding: 10px 20px 20px 20px;
-    text-align: left;
+        background: #2b3344be;
+        border-radius: 5px;
+        width: 80%;
+        margin: 5px auto 20px auto;
+        padding: 10px 20px 20px 20px;
+        text-align: left;
 }
 
 .ReplyBoxContainer {
@@ -78,7 +110,28 @@ button:active{
 @media all and (min-width: 1065px){
     .PostSection{
         display: flex;
+        flex-wrap: wrap;
         margin-bottom: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media all and (max-width: 1065px){
+    .AdminSection{
+        margin-bottom: 20px;
+        margin-top: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media all and (min-width: 1065px){
+    .AdminSection{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+        margin-top: 20px;
         padding-left: 20px;
         padding-right: 20px;
     }
@@ -137,6 +190,50 @@ button:active{
 }
 
 @media all and (max-width: 1065px){
+    .LoginInput{
+        color: #000000;
+        border-radius: 5px;
+        min-height: 7vh;
+        max-width: 100%;
+        font-size: 25px;
+        padding: 5px;
+        box-sizing: border-box;
+        margin: 10px auto;
+    }
+}
+@media all and (min-width: 1065px){
+    .LoginInput{
+        color: #000000;
+        border-radius: 5px;
+        min-height: 5vh;
+        max-width: 50%;
+        font-size: 20px;
+        padding: 5px;
+        box-sizing: border-box;
+        margin: 5px auto;
+    }
+}
+
+@media all and (max-width: 1065px){
+    .Loginbtn{
+        padding: 20px 40px;
+        min-width: 15%;
+        margin: 5px auto;
+        color: #F7F3E3;
+        font-weight: bold;
+        font-size: 25px;
+    }
+}
+
+.Loginbtn{
+    min-width: 15%;
+    margin: 5px auto;
+    padding: 10px 20px;
+    color: #F7F3E3;
+    font-weight: bold;
+}
+
+@media all and (max-width: 1065px){
     .PostBtn{
         padding: 20px 40px;
         margin-top: 10px;
@@ -164,6 +261,106 @@ button:active{
 
 .PostBtn:active{
     background-color:  #956666;
+    color: #be0000;
+}
+
+@media all and (max-width: 1065px) and (min-width:413px){
+    .AdminButtons{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: right;
+        margin-top: auto;
+    }
+}
+
+@media all and (min-width: 1065px){
+    .AdminButtons{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: auto;
+    }
+}
+
+@media all and (max-width: 1065px){
+    .DeleteBtn{
+        padding: 20px 40px;
+        margin: 10px 5px 0px 5px;
+        background-color: #B10F2E;
+        color: #F7F3E3;
+        justify-content: right;
+        font-weight: bold;
+        font-size: 25px;
+    }
+}
+
+.DeleteBtn{
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #B10F2E;
+    color: #F7F3E3;
+    justify-content: right;
+    font-weight: bold;
+}
+
+.DeleteBtn:hover{
+    background-color:  #e19999;
+    color: #be0000;
+}
+
+.DeleteBtn:active{
+    background-color:  #956666;
+    color: #be0000;
+}
+
+@media all and (max-width: 1065px){
+    .ModifyBtn{
+        padding: 20px 40px;
+        margin-top: 10px;
+        color: #F7F3E3;
+        justify-content: right;
+        font-weight: bold;
+        font-size: 25px;
+    }
+}
+
+.ModifyBtn{
+    padding: 10px 20px;
+    margin-top: 10px;
+    margin-right: 0;
+    color: #F7F3E3;
+    justify-content: right;
+    font-weight: bold;
+}
+
+@media all and (max-width: 1065px){
+    .HideBtn{
+        padding: 20px 40px;
+        margin: 10px 5px 0px 5px;
+        background-color: #c17626;
+        color: #F7F3E3;
+        justify-content: right;
+        font-weight: bold;
+        font-size: 25px;
+    }
+}
+
+.HideBtn{
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #c17626;
+    color: #F7F3E3;
+    justify-content: right;
+    font-weight: bold;
+}
+
+.HideBtn:hover{
+    background-color:  #dcba95;
+    color: #c17626;
+}
+
+.HideBtn:active{
+    background-color:  #8a673f;
     color: #be0000;
 }
 
@@ -249,3 +446,18 @@ button:active{
         display: block;
     }
 }
+
+.loader {
+    border: 7px solid #f3f3f3;
+    border-top: 7px solid #3498db;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 2s linear infinite;
+    margin: 20px auto auto;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }

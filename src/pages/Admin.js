@@ -1,11 +1,11 @@
 import React, {useState, useEffect} from "react";
 import '../styles/main.css';
-import Post from "../components/Post";
-import PostBox from "../components/PostBox"
+import AdminLogin from "../components/AdminLogin";
+import AdminView from "../components/AdminView";
 
-export default function MainPage () {
+export default function AdminPage () {
     const [postArr, setPostArr] = useState([]);
-
+    
     useEffect(() => {
 
         //Fetch the results
@@ -21,17 +21,13 @@ export default function MainPage () {
         .catch((error) => console.error("Fetch error:", error));
 
     })
-    return (
-      <div>
-        <h2 className="PageTitle">Got Questions?</h2>
-        <Post isTitle={true}/>
-        <div className="PostSection">
-         {postArr.map((post, index) => <PostBox data={post} key={index}/>)}
-        </div>
 
-        {
-        //<button className="LoadBtn">Load More</button>
-        }
-      </div>
+    return (
+    <>
+        <AdminLogin/>
+        <div className="AdminSection">
+            {postArr.map((post, index) => <AdminView data={post} key={index}/>)}
+        </div>
+    </>
     );
   }
