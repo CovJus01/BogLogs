@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import '../styles/main.css';
 
-export default function PostBox ({ data,key,isReply }) {
-    const [reply, setReply] = useState(isReply);
+export default function PostBox ({ data,key }) {
 
     return (
         <div className="PostBoxContainer">
@@ -10,9 +9,10 @@ export default function PostBox ({ data,key,isReply }) {
             <hr className="PostDivider"/>
             <p className="PostQuestion">{data.description}</p>
             <div className="Replies">
-                <a className="ReplyHyperlink" href="/">View 0 Replies</a>
+                <a className="ReplyHyperlink" href="/post">View 0 Replies</a>
                 <button className="PostBtn">Reply</button>
             </div>
+            <div className="loader" hidden/>
         </div>
     );
   }
